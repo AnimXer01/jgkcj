@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--ilus for styling-->
+   <link href="https://cdn.jsdelivr.net/gh/atoms19/ILUS.CSS/dist/ILUS5.min.css" rel="stylesheet">
+   <!--meta tags and favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:title" content="Gojo tv" id="ogTitle">
+    <meta property="og:description" content="watch animes for free with no ads and no trackers" id="ogDescription">
+  
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+
+
+  <title>Gojo tv</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bright center">
+
+
+  <!--landing page-->
+  <section class="pack intro anime-fade">
+    <h1 class="font-jumbo font-2">Gojo</h1>
+    <h4 class="font-2">safe|ads free|anime</h4>
+    <image width=220rem height=200rem class="" src='./anilooklogo.png'></image>
+    <p class="text-grey rounded">a simple web application to watch anime online with ease, say goodbye to getting redirected to spooky sites,ads and trackers </p>
+
+<div class="center">
+    <button onclick="rhome();routeTo('/home')" class="btn block violet btn-scale" >start exploring</button>
+    </div>
+
+    <h4>why use gojo over others?</h4>
+    <ul class="list">
+      <li>simple interface lets you watch the latest anime with ease no ads, all for free</li>
+      <li>we dont keep your user data we don't even have a sign in</li>
+      <li>extensive anime library, ranging from retro animes all the way to latest animes</li>
+      <li>no cookies collected</li>
+    </ul>
+
+    <note warn>
+      we dont store anime on any of our servers its all from third party websites mainly gogoanime 
+    </note>
+    <note victory>
+      enjoy gogo provider with more content sub and dub <a onclick="window.open(location.search+'?old=1')"> click me :)</a>
+    </note>
+    <note info> add gojo to your phones home screen for a smooth applike experience</note>
+    <footer class="center">
+      
+      <div>
+        
+      built by <a class="notlink" href="https://github.com/atoms19">atoms19</a>
+      </div>
+    </footer>
+  </section>
+
+  <!--application-->
+ 
+  <section class="app hide anime-fade">
+  <nav class='nav violet anime-top'>
+    <div class="nav-logo font-2" onclick="routeTo('/home')">gojo</div>
+  <ul class="hide-till-md">
+       <li id="darkmodet" onclick="tgdarkmode(this)">
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+  <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+</svg>
+       </li>
+       <li onclick="routeTo('/home')">home</li>
+       <li onclick="alert('under construction,will be ready by aug 2024')">manga</li>
+       <li onclick="localStorage.setItem('animesaves',JSON.stringify({}));loadSaves()">clear history</li>
+    </ul>
+    <div class="nav-menu hide-from-md" onclick="openMenu()">
+        <span class="burger-menu"></span>
+    </div>
+  </nav>
+
+  <div class="sidenav topnav violet">
+  <ul>
+       <li class="" id="darkmodet2"onclick="tgdarkmode(this);openMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+  <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+</svg></li>
+       <li onclick="routeTo('/home');openMenu()">home</li>
+       <li onclick="alert('under construction,will be ready by aug 2024')">manga</li>
+         <li onclick="localStorage.setItem('animesaves',JSON.stringify([]));alert('data cleared');loadSaves();openMenu()">clear history</li>
+
+    </ul>
+</div>
+<div id="search-form" class="wrap pack anime-top">
+<div id="searchbox" class="flex"><input class="inp flat" id="search-inp" placeholder="search an anime" type="text"><button class="violet btn" id="search-btn" type="submit">search</button></div>
+</div>
+<section id="home" class="anime-fade">
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+    <!--  anime slides appear here-->
+
+
+  </div>
+  <div class="swiper-pagination"></div></div>
+
+
+ <div class="pack wrap-min">
+<h3 class="font-2 margin-0">TOP AIRING</h3>
+
+<div id="top-airing" class="anime-tile-container ">
+
+
+
+</div>
+</div>
+ <div id="continue" class="pack wrap-min ">
+ <h3 class="font-2 margin-0">CONTINUE WATCHING</h3>
+
+ <div id="continue-watching" class="anime-tile-container">
+
+
+
+ </div>
+ </div>
+
+<div class="pack wrap-min">
+<h3 class="font-2 margin-0">RECENTLY POPULAR</h3>
+
+<div id="popular-airing" class="anime-tile-container ">
+
+
+
+</div>
+</div>
+
+<div class="pack wrap-min" id="more">
+<h3 class="font-2 margin-0">FIND OUT</h3>
+
+<div id="mores" class="anime-tile-container "></div>
+ </div>
+
+<div class="pack wrap-min">
+<h3 class="font-2 margin-0">DISCOVER</h3>
+
+<div id="genres" class="genre-tile-container ">
+
+  <div class="genre-tile shadow rose rounded" onclick="loadGenre('romance')">romance</div>
+    <div class="genre-tile shadow red rounded" onclick="loadGenre('action')">action</div>
+    <div class="genre-tile  shadow amber rounded" onclick="loadGenre('Slice of Life')">wholesome</div>
+ <div class="genre-tile shadow green rounded" onclick="loadGenre('fantasy')">fantasy</div>
+
+     <div class="genre-tile shadow indigo rounded" onclick="loadGenre('sports')">sports</div>
+          <div class="genre-tile shadow steel rounded" onclick="loadGenre('mecha')">mecha<small>robots</small></div>
+               <div class="genre-tile shadow wood rounded" onclick="loadGenre('mystery')">mystery</div>
+                    <div class="genre-tile shadow dark rounded" onclick="loadGenre('horror')">horror</div>
+
+
+</div>
+</div>
+<div class="pack wrap-min" id="popular">
+<h3 class="font-2 margin-0">ALL TIME POPULAR</h3>
+
+<div id="goated" class="anime-tile-container ">
+
+
+
+</div>
+</div>
+
+
+
+<p class="pack text-center font-size-1 text-light">
+
+  <br>
+© 2023 all rights reserved gojotv,anilook project by vvd
+</p>
+</section>
+
+
+ <!--home page os displayed inside the results-containwr using javascript-->
+   <section id="results" class="hide pack">
+
+
+         <!--search results are added to this container-->
+     <div id="results-container">
+
+
+     </div>
+   </section>
+
+   <!--details about an anime-->
+   <section id="details" class="hide pack wrap flex-grid">
+<div class="flex-grid-14">
+     <button id="details-back" class="violet btn">
+       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+</svg>
+     </button>
+     <div id="details-container"class="flex w-full center">
+       
+       <div class="center">
+       <div id="blur-effect-container">
+         <img id="details-blured-img" src="" class="img" alt="">
+     <img id="details-img" src="" class="img" alt="">
+     </div>
+     </div>
+     
+    </div>
+     <h1 class="font-2" id="details-title"></h1>
+  
+     <div class="center" id="watch-opt">
+     <button id="watch-btn" class="btn block violet">watch</button><button id="share-btn" class=" btn">share</button>
+     </div>
+     <div id="info-container"><p id="details-info"></p></div>
+ </div>
+ <div class="flex-grid-34">
+     <div class="center">
+     
+
+     <ul class="list shadow" id="info-list">
+       <li>
+         <span>no of episodes :</span>
+       <div id="details-episodes"></div>
+       </li>
+         <li>
+         <span>status :</span>
+       <div id="details-status"></div>
+       </li>
+       <li>
+         <span>rating :</span>
+         <div id="details-rating"></div>
+       </li>
+              <li>
+         <span>released on:</span>
+         <div id="details-release"></div>
+       </li>
+         <li>
+           <span>type :</span>
+           <div id="details-type"></div>
+         </li>
+         <li>
+           <span>language :</span>
+           <div id="details-sub"></div>
+         </li>
+         <li>
+           <span>genere :</span>
+           <div id="details-genre"></div>
+         </li>
+         <li>
+           <span>also known as :</span>
+           <div id="details-othername"></div>
+         </li>
+
+     </ul>
+     <hr>
+     <div id="relate">
+       <h3 class="font-2">related</h3>
+       <div id="related"class="anime-tile-container"></div>
+     </div>
+
+
+     <div id="recommend">
+     <h3 class="font-2">see also</h3>
+     <div id="recommendations" class="anime-tile-container">
+
+     </div>
+
+
+     </div></div>
+     </div>
+</div>
+   </section>
+
+  <!--watching section-->
+     <section id="watch" class=" wrap hide">
+       <div class="flex flex-btw">
+        <button id="back-2" class="violet btn" onclick="history.back()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+</svg>
+        </button>
+        <button class="btn violet" onclick="nextEp()">next ep</button>
+
+        </div>
+        
+<div id="ambient">
+  <canvas id="screen-blur"></canvas>
+       <video id="watch-screen" class="video-player anime-fade" controls>
+         <source type="application/x-mpegURL" id="watch-data"></source>
+       </video>
+       
+</div>
+       
+       <div class="pack">
+       <h2 id="watch-title" class="font-2"></h2>
+       <!--episodes loded here-->
+       <div class="btn-grp" id="watch-episodes">
+         </div>
+       <h4>watch quality</h4>
+       <p class="text-light" id="watch-qualityName"></p>
+       <div id="watch-quality">
+
+       </div>
+       <div id="xray-box">
+         <h4>characters</h4>
+
+         <div id="xray"
+         class="anime-tile-container xray-tile-container">
+
+         </div>
+       </div>
+       </div>
+     </section>
+  <!--loading screen-->
+  <section id="loader" class="hide auto">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </section>
+ </section>
+<section id="error" class="pack wrap center hide anime-jelly">
+
+  <h1>something went wrong</h1>
+
+  <p class="text-center ">something went wrong fetching this data it may not be available on the new site</p>
+  <a href="https://gojotv.vercel.app?old=1" class="btn violet">go to old site</a>
+</section>
+<section id="notfound" class="pack wrap hide center anime-jelly">
+  <h1 class="text-boldest font-xl text-violet">404</h1>
+  <p class="text-grey text-center">sorry we couldn't find the section you are looking for in our site</p>
+  <a href="https://gojotv.vercel.app/home" class="btn violet">go back home</a>
+</section>
+  <script src="main.js"></script>
+</body>
+</html>

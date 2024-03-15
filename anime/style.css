@@ -1,0 +1,437 @@
+:root{
+  --orange:#FF9C41!important;
+}
+
+body{
+  transition: background 0.2s;
+  scroll-behavior:smooth;
+  user-select:none;
+  --colorsec:#5F3A93;
+  --shareBtnPink:#FE7FFF;
+  -webkit-tap-highlight-color:rgba(157, 98, 255, 0.3);
+  --blurrad:0rem;
+  --defaultpos:rgba(128, 68, 219, 0.79);
+  --scrollcolor:#ccc;
+  
+}
+
+body.darkmode{
+  background:var(--dark);
+  --violet:#6E39CB;
+  color:white;
+ --colorsec:#D9BDFF;
+ --shareBtnPink:#C46CC5;
+ --blurrad:7rem;
+ --light:#423F45;
+  --scrollcolor:#444;
+}
+.text-read{
+  color:var(--colorsec);
+  font-weight:500;
+}
+body.darkmode .card{
+  background:#444;
+  color:white;
+}
+body.darkmode .list{
+  background:#222;
+  color:white;
+}
+body.darkmode .inp{
+  border-color:#222;
+  background: transparent;
+  color:white;
+
+}
+
+.block{
+  max-width:20rem;
+}
+.inp{
+  transition:box-shadow 0.2s;
+}
+.inp:focus{
+  box-shadow:0 0 0 2px var(--violet);
+  border:0;
+}
+.img{
+  max-height:80vh;
+  display:block;
+}
+.loader{
+  width:100px!important;
+}
+.loader span{
+  width:20px !important;
+  height:20px!important;
+}
+.video-player{
+  width:100%;
+  margin-top:1rem;
+}
+.anime-card{
+  perspective:1000px;
+  transition:0.32s;
+  cursor:pointer;
+  max-width:30rem;
+
+}
+.anime-card:active{
+ transform:scale(1.1);
+
+}
+#details-genre{
+
+}
+#details-info{
+  display:inline;
+  width:inherit;
+  font-size:0.98rem;
+  word-wrap:balance;
+  width:90%;
+}
+.flex-btw{
+  justify-content: space-between;
+}
+.anime-card img{
+  height:auto;
+  max-height:30rem;
+  width:100%;
+
+}
+.nav{
+ height:2.5rem;
+ opacity:0.95;
+
+}
+.sidenav{
+  padding-top:2.5rem;
+  opacity:0;
+  transition:opacity 0.5s,height 0.3s;
+}
+.sidenav.active{
+  opacity:1;
+}
+.wrap{
+  padding-top:4rem !important;
+}
+#watch-episodes{
+  display:flex;
+  flex-wrap:wrap;
+  max-height:30rem;
+  overflow-y:scroll;
+}
+.opacity{
+  opacity:0.73;
+}
+.anime-tag{
+  margin:0.1rem;
+  background:var(--violet);
+   opacity:0.73;
+   font-family:'Roboto',sans-serif;
+  color:#fff;
+}
+#searchbox{
+  align-items:center;
+}
+#searchbox .btn{
+  height:100%;
+
+
+}
+#loader{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:rgba(0,0,0,0.92);
+  z-index:100000;
+}
+#loader.hide{
+  display:none;
+}
+.loader span{
+  background:var(--violet);
+}
+#details-img{
+  width:20rem;
+  height:25rem;
+}
+#details-container{
+
+display:flex;
+  align-items:center;
+  justify-content: center;
+}
+#info-container{
+ width:90%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  overflow-y:hidden;
+}
+
+.swiper {
+  width: 100%;
+  height:17rem;
+
+}
+.swiper-slide{
+  width:100%;
+  height:100%;
+  display:flex;
+}
+.slide{
+  width:100%;
+  background-size:cover!important;
+  background-position:center center !important;
+  background-repeat:no-repeat!important;
+  position:relative;
+
+}
+.swiper-pagination *{
+  background:var(--violet);
+}
+.slide h1{
+  position:relative;
+  font-family:"Montserrat",sans-serif;
+  color:#fff;
+  margin-bottom:1rem;
+
+}
+.slide-container{
+  width:100%;
+ position: relative;
+  height:100%;
+  background:rgba(36, 19, 47, 0.61);
+  backdrop-filter:blur(3px);
+}
+.tobot{
+  position:absolute;
+  bottom:0;
+  padding:1rem;
+}
+.slide-container .btn{
+  margin:0;
+}
+
+.anime-tile-container,.genre-tile-container{
+  height:14rem;
+  width:90vw;
+  overflow-x:scroll !important;
+  padding:0.2rem 0;
+  overflow:auto;
+  display:flex;
+  flex-direction:row;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.anime-tile-container::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+.anime-tile{
+  display: inline-block;
+  flex:0 0 7rem;
+  width:7rem;
+  height:12rem;
+  background:rgba(118, 99, 251, 1);
+  background-size:cover !important;
+  background-position:center center;
+  margin-left:0.2rem;
+  cursor:pointer;
+  position:relative;
+
+}
+.anime-tile::after{
+  content:attr(pos);
+  padding:0 0.5rem;
+  background:var(--violet);
+  color:white;
+  border-bottom-right-radius:0.2rem;
+  font-family:'Montserrat',sans-serif;
+  font-size:0.8rem;
+  background:var(--defaultpos);
+  position:absolute;
+  top:0;
+
+}
+.anime-tile.manga-tile span{
+  background:rgba(255, 128, 0, 0.79);
+}
+.anime-tile span{
+  position:absolute;
+  font-family:'Montserrat',sans-serif;
+background: rgba(128, 68, 219, 0.79);
+  width:90%;
+  color:white;
+  font-size:0.6rem;
+  bottom:0px;
+  padding:0.21rem;
+  border-radius:0.3rem;
+}
+.wrap-min{
+  padding-top:1.5rem;
+}
+#details-container{
+  min-width:90vw;
+}
+#details-img,#details-blured-img{
+  width:10rem;
+  height:15rem;
+}
+#details-title{
+  font-size:2rem;
+  text-align:center;
+
+}
+#watch-btn{
+  padding:0.75rem 0;
+
+}
+#info-list{
+  word-break:break-all;
+  width:90vw;
+}
+#info-list span{
+  color:var(--colorsec)!important;
+  padding:0.3rem 0 !important;
+
+}
+.genre-tile{
+ padding:0.5rem 2rem;
+ height:5rem;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  font-size:1.2rem;
+  color:white;
+  margin-right:1.2rem;
+  min-width:5rem;
+  word-wrap:no-wrap;
+  opacity:0.75;
+
+}
+small{
+  font-size:0.13rem;
+}
+.genre-tile-container{
+  height:7rem;
+}
+.xray-tile-container{
+  height:11rem;
+}
+.character-tile{
+  display: inline-flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  flex:0 0 7rem;
+  width:15rem;
+  height:7rem;
+  margin-left:0.5rem;
+  cursor:pointer;
+  position:relative;
+}
+.character-img{
+  width:5rem;
+  height:6rem;
+  border-radius:0.7rem;
+
+}
+
+.character-name{
+  font-size:0.8rem;
+  font-weight:500;
+  margin-bottom:0;
+  text-align: center;
+}
+.character-va{
+  margin-top:0;
+  color:var(--grey);
+  font-size:0.57rem;
+  text-align:center;
+}
+.notlink{
+
+  display:inline;
+}
+#blur-effect-container{
+  width:11rem;
+  height:16rem;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+ 
+}
+#details-blured-img,#details-img{
+  position:absolute;
+
+
+}
+
+
+#details-blured-img{
+
+  width:10.01rem;
+  height:15.01rem;
+}
+#details-blured-img{
+  filter:blur(var(--blurrad)) saturate(180%) brightness(200%);
+  z-index:-5;
+}
+#share-btn{
+  background:var(--shareBtnPink);
+}
+#ambient{
+  position:relative;
+  display:block;
+}
+#screen-blur{
+  position:absolute;
+  z-index:-20;
+  background: #3D47AE;
+  transform:scale(1.2);
+  display:none;
+}
+
+::-webkit-scrollbar {
+  width:0.5rem;
+}
+::-webkit-scrollbar-track {
+  background:var(--scrollcolor);
+  border-radius:0rem;
+}
+::-webkit-scrollbar-thumb {
+  background:var(--night);
+  border-radius:0rem;
+}
+::-webkit-scrollbar-thumb:hover{
+  opacity:0.8;
+}
+.hide{
+  display:none!important;
+}
+.list li{
+    border-bottom:1px solid var(--scrollcolor);
+  
+}
+.flex-grid{
+  display:flex;
+}
+.flex-grid-14{
+  flex-basis:40%;
+}
+
+@media (max-width:680px){
+.flex-grid{
+  display:block;
+}
+}
